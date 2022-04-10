@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import ApacheLog
 
-# Register your models here.
+
+@admin.register(ApacheLog)
+class ApacheLogAdmin(admin.ModelAdmin):
+    #TODO написать фильтры
+    pass

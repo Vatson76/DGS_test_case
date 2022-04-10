@@ -52,3 +52,9 @@ class ApacheLog(models.Model):
         ordering = '-date',
         verbose_name = 'Лог Apache'
         verbose_name_plural = 'Логи Apache'
+
+    def __str__(self):
+        return 'Лог ip {ip}, тип запроса {request_type}'.format(
+            ip=self.ip,
+            request_type=self.request_type
+        )

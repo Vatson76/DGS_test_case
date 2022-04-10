@@ -2,15 +2,15 @@ from django.db import models
 
 
 class RequestTypes(models.TextChoices):
-    GET = 'GET'
-    HEAD = 'HEAD'
-    POST = 'POST'
-    PUT = 'PUT'
-    DELETE = 'DELETE'
-    CONNECT = 'CONNECT'
-    OPTIONS = 'OPTIONS'
-    TRACE = 'TRACE'
-    PATCH = 'PATCH'
+    GET = 'GET', 'GET'
+    HEAD = 'HEAD', 'HEAD'
+    POST = 'POST', 'POST'
+    PUT = 'PUT', 'PUT'
+    DELETE = 'DELETE', 'DELETE'
+    CONNECT = 'CONNECT', 'CONNECT'
+    OPTIONS = 'OPTIONS', 'OPTIONS'
+    TRACE = 'TRACE', 'TRACE'
+    PATCH = 'PATCH', 'PATCH'
 
 
 class ApacheLog(models.Model):

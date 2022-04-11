@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import index, RegisterUser, LoginUser, logout_user
+from .yasg import schema_view
 
 
 urlpatterns = [
@@ -26,4 +27,15 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
 
     path('api/v1/', include('apache_logs.urls')),
+
+    path(
+        'swagger/',
+        schema_view.with_ui('swagger', cache_timeout=0),
+        name='schema-swagger-ui'
+    ),
+    path(
+        'redoc/',
+        schema_view.with_ui('redoc', cache_timeout=0),
+        name='schema-redoc'
+    )
     ]

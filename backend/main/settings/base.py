@@ -45,7 +45,10 @@ INSTALLED_APPS = APPS + [
     'django.contrib.staticfiles',
 
     'rangefilter',
+    'rest_framework',
     'django_celery_beat',
+    'drf_yasg',
+    'django_filters'
 
 
 ]
